@@ -12,7 +12,15 @@ function App() {
   return (
     <div className="App">
       <h1>Jammming</h1>
+      <SearchBar />
+      <div className="App-playlist">
+        <SearchResults searchResults={searchResults} />
+        <Playlist 
+          playlistName={playlistName}
+          playlistTracks={playlistTracks}
+        />
     </div>
+  </div>
   );
 }
 
