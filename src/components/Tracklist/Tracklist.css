@@ -1,0 +1,36 @@
+/* src/components/TrackList/TrackList.css */
+.TrackList {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.TrackList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.TrackList::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.TrackList::-webkit-scrollbar-thumb {
+    background: #1db954;
+    border-radius: 4px;
+}
+
+/* Animation for new tracks */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.Track {
+    animation: slideIn 0.3s ease forwards;
+}

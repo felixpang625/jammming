@@ -1,22 +1,35 @@
-import React, { useState } from "react";
-import "./SearchBar.css";
+// src/components/SearchBar/SearchBar.js
+import React, { useState } from 'react';
+import './SearchBar.css';
 
-function SearchBar ({onSearch}) {
-    const [term, setTerm] = useState('')
+function SearchBar({ onSearch }) {
+    const [term, setTerm] = useState('');
 
     const search = () => {
         onSearch(term);
     };
 
+    const handleTermChange = (event) => {
+        setTerm(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        search();
+    };
+
     return (
         <div className="SearchBar">
-            <input 
-            placeholder="Enter a Song, Album, or Artist"
-            onChange={(e) => setTerm(e.target.value)}
-            />
-            <button className="SearchButton" onclick={search}>
-                SEARCH
-            </button>
+            <form onSubmit={handleSubmit}>
+                <input 
+                    placeholder="Enter A Song, Album, or Artist" 
+                    onChange={handleTermChange}
+                    value={term}
+                />
+                <button className="SearchButton" type="submit">
+                    SEARCH
+                </button>
+            </form>
         </div>
     );
 }

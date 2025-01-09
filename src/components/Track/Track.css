@@ -1,0 +1,75 @@
+/* src/components/Track/Track.css */
+.Track {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.Track:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.Track-information {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.Track-information h3 {
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.Track-information p {
+    color: #b3b3b3;
+    margin: 0.3rem 0 0 0;
+    font-size: 0.9rem;
+}
+
+.Track-action {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.Track-action:hover {
+    color: #1db954;
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .Track {
+        padding: 0.8rem;
+    }
+
+    .Track-information h3 {
+        font-size: 0.9rem;
+    }
+
+    .Track-information p {
+        font-size: 0.8rem;
+    }
+
+    .Track-action {
+        font-size: 1.2rem;
+        width: 32px;
+        height: 32px;
+    }
+}
